@@ -3,7 +3,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const webpackConfig = require('./webpack.config.js');
@@ -52,9 +52,9 @@ webpackConfig.optimization = {
             sourceMap: false,
             extractComments: true, // 移除注释
             uglifyOptions: {
+                warnings: false,
                 compress: {
                     unused: true,
-                    warnings: false,
                     drop_debugger: true,
                     drop_console: true,//console
                     pure_funcs: ['console.log']//移除console
