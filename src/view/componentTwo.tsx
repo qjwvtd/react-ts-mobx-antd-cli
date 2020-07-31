@@ -10,18 +10,18 @@ const ComponentTwo: React.SFC<TwoProps> = (props) => {
         props.setName(e.target.value);
     }
     return <>
-        <Row>
-            <Col span={8} offset={8}>
+        <Row style={{ margin: '25px 0' }}>
+            <Col span={8}>
                 <h4>Update name:</h4>
             </Col>
         </Row>
         <Row>
-            <Col span={8} offset={8}>
+            <Col span={8}>
                 <Input value={props.name} onChange={handleOnChange} />
             </Col>
         </Row>
         <Row>
-            <Col span={8} offset={8}>
+            <Col span={8}>
                 <span>{props.name}</span>
             </Col>
         </Row>

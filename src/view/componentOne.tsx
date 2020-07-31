@@ -1,15 +1,18 @@
 import React from 'react';
+import { observer } from 'mobx-react';
 import { Card } from 'antd';
+import store from '@/common/store/index';
 
 interface Name {
     name: string
 }
 
-const ComponentOne: React.SFC<Name> = (props) => {
+const ComponentOne: React.SFC<Name> = observer(({ name }) => {
     return <>
         <Card title="title" extra={<a>More</a>} style={{ width: 300 }}>
-            <p>{props.name}</p>
+            <h4>{name}</h4>
+            <p>{store.address}</p>
         </Card>
     </>;
-};
+});
 export default ComponentOne;

@@ -8,7 +8,7 @@ import ComponentThree from './componentThree';
 
 
 const App: FC = () => {
-    const [name, setName] = useState("initialName");
+    const [name, setName] = useState("zhang.xiaojun");
     function handleOnchange(value) {
         setName(value);
     }
@@ -29,7 +29,7 @@ const App: FC = () => {
                     <ComponentTwo name={name} setName={handleOnchange} />
                 </Route>
                 <Route path={'/three'}>
-                    <ComponentThree />
+                    <ComponentThree name={name} />
                 </Route>
             </Switch>
         </HashRouter>

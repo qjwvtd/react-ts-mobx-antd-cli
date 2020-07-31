@@ -3,23 +3,28 @@ import { Row, Col, Input } from 'antd';
 import { observer } from 'mobx-react';
 import store from '@/common/store/index';
 
-const ComponentThree = observer(() => {
+interface ThreeName {
+    name: string
+}
+
+const ComponentThree: React.SFC<ThreeName> = observer(({ name }) => {
     function handleAddress(e: { target: { value: string; }; }) {
         store.setAddress(e.target.value);
     }
     return <>
-        <Row>
-            <Col span={8} offset={8}>
+        <Row style={{ marginTop: '25px' }}>
+            <Col span={8}>
                 <h4>Mobx Exzample</h4>
             </Col>
         </Row>
-        <Row style={{ margin: '15px 0' }}>
-            <Col span={8} offset={8}>
+        <Row style={{ margin: '25px 0' }}>
+            <Col span={8}>
                 <Input value={store.address} onChange={handleAddress} />
             </Col>
         </Row>
         <Row>
-            <Col span={8} offset={8}>
+            <Col span={8}>
+                <h4>{name}</h4>
                 {store.address}
             </Col>
         </Row>

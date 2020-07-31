@@ -1,7 +1,7 @@
 {
-  "name": "react-typescript-by-sample",
+  "name": "react-typescript-cli",
   "version": "1.0.0",
-  "description": "React Typescript examples",
+  "description": "react typescript examples",
   "main": "index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --mode=development --config ./build/webpack.dev.js --progress --watch",
@@ -15,7 +15,7 @@
     "typescript",
     "antd"
   ],
-  "author": "Braulio Diez Botella",
+  "author": "qjwvtd",
   "license": "MIT",
   "devDependencies": {
     "@types/react": "^16.8.3",
@@ -63,5 +63,6 @@
   "dependencies": {
     "react": "^16.8.2",
     "react-dom": "^16.8.2"
-  }
+  },
+  "repository": "https://github.com/qjwvtd/react-ts-mobx-antd-cli.git"
 }
