@@ -4,7 +4,7 @@ interface TwoProps {
     name: string;
     setName: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
-const ComponentTwo: React.SFC<TwoProps> = (props) => {
+const ComponentTwo: React.FC<TwoProps> = (props) => {
     function handleOnChange(e) {
         console.log(e.target.value);
         props.setName(e.target.value);

@@ -7,7 +7,7 @@ interface Name {
     name: string
 }
 
-const ComponentOne: React.SFC<Name> = observer(({ name }) => {
+const ComponentOne: React.FC<Name> = observer(({ name }) => {
     return <>
         <Card title="title" extra={<a>More</a>} style={{ width: 300 }}>
             <h4>{name}</h4>

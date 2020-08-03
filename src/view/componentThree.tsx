@@ -7,7 +7,7 @@ interface ThreeName {
     name: string
 }
 
-const ComponentThree: React.SFC<ThreeName> = observer(({ name }) => {
+const ComponentThree: React.FC<ThreeName> = observer(({ name }) => {
     function handleAddress(e: { target: { value: string; }; }) {
         store.setAddress(e.target.value);
     }
