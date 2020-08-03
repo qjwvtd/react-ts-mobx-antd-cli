@@ -5,14 +5,14 @@ module.exports = {
         sourceType: "module",
         ecmaFeatures: {
             experimentalObjectRestSpread: true,
-            jsx: true,
-        },
+            jsx: true
+        }
     },
     plugins: ["@typescript-eslint", "typescript", "react", "html", "react-hooks"],
     env: {
         browser: true, // 开发环境配置表示可以使用浏览器的方法
         node: true, //
-        es6: true,
+        es6: true
     },
     extends: ["plugin:@typescript-eslint/recommended"],
     rules: {
@@ -24,7 +24,6 @@ module.exports = {
         "react/jsx-uses-react": 1,
         //防止在JSX中使用的变量被错误地标记为未使用
         "react/jsx-uses-vars": 2,
-        "react/jsx-uses-react": 2,
         // 检查 Hook 的规则
         "react-hooks/rules-of-hooks": "error",
         // 检查 effect 的依赖
@@ -63,8 +62,8 @@ module.exports = {
             2,
             {
                 before: false,
-                after: true,
-            },
+                after: true
+            }
         ],
         //禁止行尾有空格
         "no-trailing-spaces": "error",
@@ -78,5 +77,5 @@ module.exports = {
         "no-spaced-func": 2,
         // 类和接口的命名必须遵守帕斯卡命名法，比如 PersianCat
         "typescript/class-name-casing": "error"
-    },
+    }
 };
