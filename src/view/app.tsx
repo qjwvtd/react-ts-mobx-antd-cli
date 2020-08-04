@@ -5,6 +5,7 @@ import ComponentOne from "./componentOne";
 import ComponentTwo from "./componentTwo";
 import ComponentThree from './componentThree';
 import ComponentFour from './componentFour';
+import ComponentFive from './componentFive';
 const { Header, Content } = Layout;
 
 
@@ -23,6 +24,7 @@ const App: FC = () => {
                         <Menu.Item key="2"><Link to="/two">nav two</Link></Menu.Item>
                         <Menu.Item key="3"><Link to="/three">nav three</Link></Menu.Item>
                         <Menu.Item key="4"><Link to="/four">nav four</Link></Menu.Item>
+                        <Menu.Item key="5"><Link to="/five">nav five</Link></Menu.Item>
                     </Menu>
                 </Header>
                 <Content>
@@ -40,6 +42,9 @@ const App: FC = () => {
                                 </Route>
                                 <Route path={'/four'}>
                                     <ComponentFour age={25} />
+                                </Route>
+                                <Route path={'/five'}>
+                                    <ComponentFive />
                                 </Route>
                             </Switch>
                         </Col>
